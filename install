@@ -1,0 +1,22 @@
+Install
+# useradd Coniglio
+# passwd Coniglio
+# usermod -aG wheel Coniglio
+
+# visudo
+ユーザ名 ALL=(ALL) ALL
+
+# vi /etc/ssh/sshd_config
+PermitRootLogin no
+AllowUsers Coniglio
+# systemctl restart sshd
+
+AWS
+yum -y install python-pip
+pip install awscli
+aws configure
+
+AWS Access Key ID [None]: xxx
+AWS Secret Access Key [None]: xxx
+Default region name [None]: us-west-2
+Default output format [None]: json
