@@ -20,3 +20,8 @@ AWS Access Key ID [None]: xxx
 AWS Secret Access Key [None]: xxx
 Default region name [None]: us-west-2
 Default output format [None]: json
+
+firewall-cmd
+firewall-cmd --add-port=8080/tcp --zone=public --permanent
+firewall-cmd --add-service=https --zone=public --permanent
+firewall-cmd --reload
